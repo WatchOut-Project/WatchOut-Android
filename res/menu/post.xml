@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_pick_picture"
+        android:icon="@drawable/ic_action_picture_pick"
+        android:showAsAction="always"
+        android:title="@string/menu_pick_picture"/>
+    <item
+        android:id="@+id/menu_pick_place"
+        android:icon="@drawable/ic_action_location_pick"
+        android:showAsAction="always"
+        android:title="@string/menu_pick_place"/>
+    <item
+        android:id="@+id/menu_post"
+        android:enabled="false"
+        android:icon="@drawable/ic_action_post_checkable"
+        android:showAsAction="always"
+        android:title="@string/menu_post"/>
+
+</menu>

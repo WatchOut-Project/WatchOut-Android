@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/st_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wo_panel_color">
+
+    <LinearLayout
+        android:id="@+id/st_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/st_main_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/st_main_image_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/seoul_bg"/>
+
+            <ImageView
+                android:id="@+id/st_main_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/st_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:minHeight="@dimen/statistics_min_height">
+
+            <LinearLayout
+                android:id="@+id/st_child"
+                android:layout_width="@dimen/statistics_bar_width"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_child_count"
+                    style="@style/statisticsCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/st_child_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/statisticsBar"/>
+
+                <com.utopia.watchout.custom.view.AutoResizeTextView
+                    android:id="@+id/st_child_name"
+                    style="@style/statisticsCategoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/child"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/st_adolescent"
+                android:layout_width="@dimen/statistics_bar_width"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_adolescent_count"
+                    style="@style/statisticsCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/st_adolescent_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/statisticsBar"/>
+
+                <com.utopia.watchout.custom.view.AutoResizeTextView
+                    android:id="@+id/st_adolescent_name"
+                    style="@style/statisticsCategoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adolescent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/st_youngster"
+                android:layout_width="@dimen/statistics_bar_width"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_youngster_count"
+                    style="@style/statisticsCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/st_youngster_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/statisticsBar"/>
+
+                <com.utopia.watchout.custom.view.AutoResizeTextView
+                    android:id="@+id/st_youngster_name"
+                    style="@style/statisticsCategoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/youngster"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/st_adult"
+                android:layout_width="@dimen/statistics_bar_width"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_adult_count"
+                    style="@style/statisticsCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/st_adult_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/statisticsBar"/>
+
+                <com.utopia.watchout.custom.view.AutoResizeTextView
+                    android:id="@+id/st_adult_name"
+                    style="@style/statisticsCategoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adult"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/st_senior"
+                android:layout_width="@dimen/statistics_bar_width"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_senior_count"
+                    style="@style/statisticsCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/st_senior_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/statisticsBar"/>
+
+                <com.utopia.watchout.custom.view.AutoResizeTextView
+                    android:id="@+id/st_senior_name"
+                    style="@style/statisticsCategoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/senior"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

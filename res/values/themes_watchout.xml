@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Watchout" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_watchout</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Watchout</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Watchout</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Watchout</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Watchout</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Watchout</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_watchout</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_watchout</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Watchout</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_arrow</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Watchout.Widget</item>
+        <!-- Widgets Theme -->
+        <item name="android:editTextStyle">@style/EditTextwatchout</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewwatchout</item>
+        <item name="android:buttonStyle">@style/Buttonwatchout</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonwatchout</item>
+        <item name="android:spinnerStyle">@style/Spinnerwatchout</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemwatchout</item>
+        <item name="android:listViewStyle">@style/ListViewwatchout</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewwatchout.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemwatchout</item>
+
+        <!-- AlertDialog -->
+        <item name="alertDialogStyle">@style/Holo.AlertDialog</item>
+        <item name="alertDialogTheme">@style/Holo.Theme.Dialog.Alert</item>
+    </style>
+    
+    <style name="Theme.Watchout.Up" parent="@style/Theme.Watchout">
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_arrow</item>
+    </style>
+
+    <style name="ActionBar.Solid.Watchout" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_watchout</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_watchout</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_watchout</item>
+        <item name="progressBarStyle">@style/ProgressBar.Watchout</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Watchout" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_watchout</item>
+        <item name="progressBarStyle">@style/ProgressBar.Watchout</item>
+    </style>
+
+    <style name="PopupMenu.Watchout" parent="@style/Widget.Sherlock.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_watchout</item>
+    </style>
+
+    <style name="DropDownListView.Watchout" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_watchout</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Watchout" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_watchout</item>
+    </style>
+
+    <style name="DropDownNav.Watchout" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_holo_light</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_watchout</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_watchout</item>
+    </style>
+
+    <style name="ProgressBar.Watchout" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_watchout</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Watchout" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_watchout</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Watchout.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Watchout</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Watchout</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Exit comment -->
+    <string name="please_press_back_button_again_to_exit_">"한 번 더 누르면 앱이 종료됩니다."</string>
+
+    <!-- Side Menu Item -->
+    <string name="map">지도</string>
+    <string name="post">올림</string>
+    <string name="help_upper">도움</string>
+    <string name="help_noti">알림</string>
+    <string name="help_setting">알림 설정</string>
+    <string name="statistics_upper">통계</string>
+
+    <!-- Turn On GPS -->
+    <string name="turn_on_gps_title">"\"Watch Out\" 지도 환경을 개선"</string>
+    <string name="turn_on_gps_message">"GPS 및 모바일 네트워크 위치를 켭니다."</string>
+
+    <!-- Dialog -->
+    <string name="loading_">Loading&#8230;</string>
+    <string name="skip">"건너뛰기"</string>
+    <string name="settings">"설정"</string>
+
+    <!-- Chart Category List -->
+    <string name="child">아동</string>
+    <string name="adolescent">청소년</string>
+    <string name="youngster">성인</string>
+    <string name="adult">중년</string>
+    <string name="senior">노년</string>
+    <string name="entire_region">전체 지역</string>
+
+</resources>

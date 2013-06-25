@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="statisticsText">
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/grey_hex_ed</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="statisticsCategoryText" parent="@style/statisticsText">
+        <item name="android:paddingTop">@dimen/wo_margin_tiny</item>
+    </style>
+
+    <style name="statisticsCountText" parent="@style/statisticsText">
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="statisticsBar" parent="@style/statisticsText">
+        <item name="android:layout_marginLeft">@dimen/statistics_bar_margin</item>
+        <item name="android:layout_marginRight">@dimen/statistics_bar_margin</item>
+        <item name="android:background">@drawable/rounded_chart</item>
+        <item name="android:minHeight">@dimen/statistics_bar_min_height</item>
+    </style>
+
+</resources>

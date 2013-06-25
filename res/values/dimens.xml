@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="wo_margin_extreme">20dp</dimen>
+    <dimen name="wo_margin_enormous">18dp</dimen>
+    <dimen name="wo_margin_huge">15dp</dimen>
+    <dimen name="wo_margin_big">13dp</dimen>
+    <dimen name="wo_margin_normal">10dp</dimen>
+    <dimen name="wo_margin_small">7dp</dimen>
+    <dimen name="wo_margin_little">5dp</dimen>
+    <dimen name="wo_margin_tiny">3dp</dimen>
+    
+    <dimen name="wo_text_enormous">18sp</dimen>
+    <dimen name="wo_text_huge">16sp</dimen>
+    <dimen name="wo_text_big">15sp</dimen>
+    <dimen name="wo_text_normal">13sp</dimen>
+    <dimen name="wo_text_small">11sp</dimen>
+    <dimen name="wo_text_little">9sp</dimen>
+    
+    <dimen name="wo_side_menu_max_width">280dp</dimen>
+    
+    <dimen name="statistics_min_height">100dp</dimen>
+    <dimen name="statistics_bar_width">60dp</dimen>
+    <dimen name="statistics_bar_margin">10dp</dimen>
+    <dimen name="statistics_bar_min_height">3dp</dimen>
+    
+    <dimen name="post_picutre_width">120dp</dimen>
+    
+    <dimen name="pick_place_topbar_height">48dp</dimen>
+    
+</resources>

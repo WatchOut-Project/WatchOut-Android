@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="settingTitle">
+        <item name="android:textColor">@color/grey_hex_ed</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="settingContent">
+        <item name="android:textColor">@color/grey_hex_fd</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="settingDividerTitle">
+        <item name="android:background">@color/wo_orange_color</item>
+        <item name="android:minHeight">2dp</item>
+    </style>
+
+    <style name="settingDividerContent">
+        <item name="android:background">@color/grey_hex_d5</item>
+        <item name="android:minHeight">1dp</item>
+    </style>
+
+    <style name="settingButton">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+</resources>

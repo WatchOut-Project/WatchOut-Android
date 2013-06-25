@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <View
+        android:id="@+id/side_margin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wo_margin_tiny"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <RelativeLayout
+        android:id="@+id/side_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/side_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="@dimen/wo_margin_normal"
+            android:paddingLeft="@dimen/wo_margin_enormous"
+            android:paddingRight="@dimen/wo_margin_enormous"
+            android:paddingTop="@dimen/wo_margin_huge" >
+
+            <TextView
+                android:id="@+id/side_header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/wo_orange_color"
+                android:textSize="@dimen/wo_text_normal"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/side_header_title"
+                android:layout_marginTop="@dimen/wo_margin_tiny"
+                android:background="@color/wo_orange_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/side_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <View
+                android:id="@+id/side_content_marker"
+                android:layout_width="@dimen/wo_margin_small"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@color/wo_orange_color" />
+
+            <TextView
+                android:id="@+id/side_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/side_content_marker"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/wo_margin_normal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/wo_text_enormous" />
+
+            <View
+                android:id="@+id/side_content_selected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/wo_margin_small"
+                android:background="@color/transparent_black_percent_25" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

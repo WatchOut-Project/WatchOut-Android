@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="EditTextwatchout" parent="android:Widget.EditText">
+	  <item name="android:background">@drawable/edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="AutoCompleteTextViewwatchout" parent="android:Widget.AutoCompleteTextView">
+      <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
+	  <item name="android:background">@drawable/edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="Buttonwatchout" parent="android:Widget.Button">
+	  <item name="android:background">@drawable/btn_default_holo_light</item>
+	  <item name="android:minHeight">48dip</item>
+	  <item name="android:minWidth">64dip</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="ImageButtonwatchout" parent="android:Widget.ImageButton">
+	  <item name="android:background">@drawable/btn_default_holo_light</item>
+  </style>
+
+  <style name="Spinnerwatchout" parent="android:Widget.Spinner">
+      <item name="android:background">@drawable/spinner_background_holo_light</item>
+      <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
+  </style>
+
+  <style name="Spinnerwatchout.DropDown">
+      <item name="android:spinnerMode">dropdown</item>
+  </style>
+
+  <style name="SpinnerDropDownItemwatchout" parent="android:Widget.DropDownItem.Spinner">
+      <item name="android:checkMark">@drawable/btn_radio_holo_light</item>
+  </style>
+  <style name="ListViewwatchout" parent="android:Widget.ListView">
+      <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+  </style>
+
+  <style name="ListViewwatchout.White" parent="android:Widget.ListView.White">
+      <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerItemwatchout" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+      <item name="android:textColor">#000000</item>
+  </style>
+
+</resources>

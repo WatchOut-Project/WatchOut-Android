@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Watchout" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_watchout</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Watchout</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Watchout</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Watchout</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Watchout</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Watchout</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_watchout</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_watchout</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Watchout</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_arrow</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Watchout.Widget</item>
+        <!-- Widgets Theme -->
+        <item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewwatchout</item>
+        <item name="android:buttonStyle">@style/Buttonwatchout</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonwatchout</item>
+        <item name="android:dropDownSpinnerStyle">@style/Spinnerwatchout</item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_holo_light</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_holo_light</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb_holo</item>
+
+        <!-- AlertDialog -->
+        <item name="android:alertDialogStyle">@style/Holo.AlertDialog</item>
+        <item name="android:alertDialogTheme">@style/Holo.Theme.Dialog.Alert</item>
+    </style>
+    
+    <style name="Theme.Watchout.Up" parent="@style/Theme.Watchout">
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_arrow</item>
+    </style>
+
+</resources>

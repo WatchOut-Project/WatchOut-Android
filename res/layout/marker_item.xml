@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wo_margin_normal"
+    android:paddingLeft="@dimen/wo_margin_normal"
+    android:paddingRight="@dimen/wo_margin_normal"
+    android:paddingTop="@dimen/wo_margin_normal" >
+
+    <TextView
+        android:id="@+id/item_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/wo_margin_little"
+        android:includeFontPadding="false"
+        android:textColor="@color/grey_hex_dd"
+        android:textSize="@dimen/wo_text_big"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/wo_margin_little"
+        android:includeFontPadding="false"
+        android:textColor="@color/grey_hex_dd"
+        android:textSize="@dimen/wo_text_normal" />
+
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/wo_margin_little"
+        android:gravity="right"
+        android:includeFontPadding="false"
+        android:textColor="@color/grey_hex_dd"
+        android:textSize="@dimen/wo_text_small" />
+
+    <RelativeLayout
+        android:id="@+id/item_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_white_percent_15" >
+
+        <WebView
+            android:id="@+id/item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/wo_margin_small"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/item_loading"
+                style="@style/Holo.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

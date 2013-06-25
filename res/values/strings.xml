@@ -1,0 +1,94 @@
+<resources>
+    
+    <!-- App Name -->
+    <string name="app_name">Watch Out</string>
+    
+    <!-- Exit comment -->
+    <string name="please_press_back_button_again_to_exit_">"Please press Back button again to exit."</string>
+
+    <!-- Navi Drawer -->
+    <string name="drawer_open">Menu Open</string>
+    <string name="drawer_close">Menu Close</string>
+
+    <!-- Navi Drawer Item -->
+    <string name="menu">Menu</string>
+    <string name="map">Map</string>
+    <string name="post">Post</string>
+    <string name="help_upper">HELP</string>
+    <string name="help_noti">Help Noti</string>
+    <string name="help_setting">Help Setting</string>
+    <string name="statistics_upper">STATISTICS</string>
+    
+    <!-- Option Menu -->
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_write">Write</string>
+    <string name="menu_pick_place">Pick Place</string>
+    <string name="menu_pick_picture">Pick Picture</string>
+    <string name="menu_current_location">Current Location</string>
+    <string name="menu_post">Post</string>
+    <string name="menu_share">Share</string>
+    
+    
+    <!-- MapBasedSNS -->
+    <!-- Facebook Strings -->
+    <string name="facebook_connect_error">Facebook Connect Error</string>
+    <string name="facebook_session_open_error">Facebook Session Open Error</string>
+    <string name="couldnt_open_session_with_accesstoken">Couldn\'t open session with accessToken</string>
+    <string name="facebook_publish_status_failed">Facebook Publish Status Failed</string>
+    <string name="photo_streaming_error">Photo Streaming Error</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="ok_button">OK</string>
+    <string name="no_location">Could not obtain your current location.</string>
+    
+    <!-- Google Map Strings -->
+    <string name="set_location">Set Location</string>
+    <string name="drag_your_marker_to_the_closest_place">Drag your marker to the closest place</string>
+    
+    <!-- Post -->
+    <!-- Post -->
+    <string name="post_done_message">Post has been successfully updated</string>
+    <string name="post_done_message">Posting Failed</string>
+    
+    <!-- Pick Place Activity -->
+    <string name="select_place">Select a place</string>
+    
+    <!-- Context Menu -->
+    <string name="take_a_photo">Take a Photo</string>
+    <string name="choose_photo_from_gallery">Choose Photo from Gallery</string>
+    <string name="select_photo">Select Photo</string>
+    
+    <!-- Help -->
+    <string name="dialog_title">Help Me!</string>
+    <string name="dialog_message">This will send to</string>
+    <string name="dialog_message_fb">Facebook</string>
+    <string name="dialog_message_tw">Twitter</string>
+    <string name="dialog_message_gp">Google Plus</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    
+    <!-- Help Setting -->
+    <string name="help_count_left_title">Help Setting Left : </string>
+    <string name="help_count_left_message">Purchase more Help Noti</string>
+    <string name="purchase">Purchase</string>
+    <string name="siren">Siren</string>
+    <string name="sound">Sound</string>
+    
+    <!-- Turn On GPS -->
+    <string name="turn_on_gps_title">"Improve location accuracy"</string>
+    <string name="turn_on_gps_message">"Turn on GPS and mobile network location to enhance your \"Watch Out\" experience."</string>
+    
+    <!-- Dialog -->
+    <string name="loading_">Loading&#8230;</string>
+    <string name="skip">"Skip"</string>
+    <string name="settings">"Settings"</string>
+    
+    <!-- Statistics -->
+    <!-- Chart Category List -->
+    <string name="child">Child</string>
+    <string name="adolescent">Adolescent</string>
+    <string name="youngster">Youngster</string>
+    <string name="adult">Adult</string>
+    <string name="senior">Senior</string>
+    
+    <string name="entire_region">Entire Region</string>
+</resources>
