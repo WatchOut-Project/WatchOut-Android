@@ -91,4 +91,75 @@
     <string name="senior">Senior</string>
     
     <string name="entire_region">Entire Region</string>
+
+    <!-- Sign in and up -->
+    <!-- Sign In Up -->
+    <string name="logo_text">Smart Protection Map SNS</string>
+    <string name="or_use_your_email_to">"or use your Email to"</string>
+    <string name="connect_with_facebook">"Connect with Facebook"</string>
+    <string name="connect_with_google_plus">"Connect with Google+"</string>
+    <string name="sign_up">"Sign Up"</string>
+    <string name="sign_in">"Sign In"</string>
+    <string name="connecting">"Connecting…"</string>
+    <string name="connect_account">"Connect your Facebook"</string>
+    <string name="vingle_net">"Vingle.net/"</string>
+    <string name="post_my_activity_to_facebook">"Post my activity to Facebook"</string>
+    <string name="post_my_activity_to_gp">"Post my activity to Google Plus"</string>
+    <string name="username">"Username"</string>
+    <string name="this_is_your_page_url">"This is your page URL which cannot be changed later"</string>
+    <string name="email_address">"Email Address"</string>
+    <string name="password_at_least">"Password (at least 6 characters)"</string>
+    <string name="create_account">"Create Account"</string>
+    <string name="by_creating_an_account_you_agree_to_our_s">"By creating an account, you agree to our %s"</string>
+    <string name="terms_and_conditions">"terms and conditions"</string>
+    <string name="username_or_e_mail">"Username or Email Address"</string>
+    <string name="password">"Password"</string>
+    <string name="forgot_your_password">"Forgot your password?"</string>
+    <string name="would_you_like_to_use_s_for_your_vingle_username_if_not_please_type_in_a_new_username_below_also_dont_forget_to_create_password">"Would you like to use %s as your Vingle username? If not, please type in a new username below. Also don't forget to create a password. :)"</string>
+    <string name="hey_comma_s">"Hey, %s"</string>
+    <string name="already_have_a_vingle_account">"Already have a Vingle account?"</string>
+    <string name="don_t_have_a_vingle_account">"Don't have a Vingle account?"</string>
+    <string name="fail_to_login">"Fail to login."</string>
+    <string name="once_you_connect_vingle_to">"Once you connect Vingle to your Facebook account, you can sign in to Vingle using Facebook."</string>
+    <string name="facebook_connect_error">"Facebook Connect Error"</string>
+    <string name="login_server_connection_failed">"Login Server connection failed"</string>
+    <string name="please_retry_connecting">"Please retry connecting."</string>
+    <string name="invalid_password">"Invaild Password"</string>
+    <string name="please_double_check_your_password_and_try_again">"Please double-check your password and try again."</string>
+    <string name="invalid_username">"Invalid Username"</string>
+    <string name="please_double_check_your_username_or_email_address_and_try_again">"Please double-check your username or email address and try again."</string>
+    <string name="unavailable_username">"Unavailable Username"</string>
+    <string name="unavailable_email">"Unavailable Email"</string>
+    <string name="unavailable_username_or_email">"Unavailable Username or Email"</string>
+    <string name="unavailable_password">"Unavailable Password"</string>
+    <string name="email_is_invalid">"Email is invalid"</string>
+    <string name="please_use_at_least_4_characters">"Please use at least 4 characters!"</string>
+    <string name="please_use_at_least_6_characters">"Please use at least 6 characters!"</string>
+    <string name="username_is_too_long_maximum_is_15_characters">"Username is too long! (maximum is 15 characters)"</string>
+
+    <!-- Sign Up Process -->
+    <string name="continue_string">"Continue"</string>
+    <string name="join_parties_the_first_step_to_enjoy_vingle_">"Join Interest Networks, the first step to enjoying Vingle!"</string>
+    <string name="_party_is_an_interested_based_community_by_joining_parties_get_your_favorite_contents_on_your_feed_">"You can meet Vinglers who have the same interests, as well as view their content through your 'Feed'."</string>
+    <string name="now_follow_the_collections_">"Now, follow collections."</string>
+    <string name="a_collection_is_a_set_of_content_curated_by_vinglers_enjoy_the_contents_and_communicate_with_other_vinglers_who_share_your_interest_">"A collection is a set of content curated by Vinglers. It can be a magazine, an archive, or a group that shares a particular interest."</string>
+    <string name="vingle_is_more_fun_with_friends">"Vingle is more fun with friends."</string>
+    <string name="vingle_is_more_fun_with_friends_invite_your_friends_and_talk_about_the_things_you_like_more_fun_more_friendship">"Vingle is more fun with friends! Invite your friends and talk about the things you like. More fun, more friendship!"</string>
+    <string name="follow_your_friends_collections_and_talk_about_the_things_you_like_more_fun_more_friendship">"Follow your friends' collections and talk about the things you like. More fun, more friendship!"</string>
+    <string name="d_facebook_friends_on_vingle">"%d Facebook friends on Vingle"</string>
+    <string name="we_havent_found_yout_facebook_friends_on_vingle_if_your_friends_are_not_on_vingle_yet_invite_them">"We haven't found your Facebook friends on Vingle. Invite your friends, your Vingling will be much better."</string>
+    <string name="we_havent_found_yout_facebook_friends_on_vingle">"We haven't found your Facebook friends on Vingle."</string>
+    <string name="invite_your_facebook_friends_to_vingle">"Invite your facebook friends to Vingle"</string>
+    <string name="find_facebook_friends_who_are_also_vinglers_and_find_what_theyre_interested_in">"Find Facebook friends who are also Vinglers, and find what they're interested in."</string>
+    <string name="curated_d_collections">"curated %d collections"</string>
+    <string name="follow_all_collections">"Follow All Collections"</string>
+    <string name="following_all_collections">"Following All Collections"</string>
+    <string name="invite">"Invite"</string>
+    <string name="invited">"Invited"</string>
+    <string name="no_notifications_yet_">"No notifications yet :&lt;"</string>
+    <string name="facebook_invite_friend_message">"Connect with the world through your interests! From Sports to Movies, Music, Travel, Food, Fashion, Car, Art&amp;Design, Humor and more. Catch up with magazines published by Vinglers in over 1,500 interest areas and build social networks around the globe."</string>
+    <string name="curated_s_collections">"Curated %s collections"</string>
+    <string name="follow_s_collections">"Following %s collections"</string>
+
+
 </resources>

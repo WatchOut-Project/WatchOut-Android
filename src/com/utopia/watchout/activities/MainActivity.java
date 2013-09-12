@@ -248,15 +248,15 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
         ArrayList<SideItem> sideList = new ArrayList<SideItem>();
         sideList.add(new SideItem(true));
         sideList.add(new SideItem(getString(R.string.map), WOFragType.NULL).setSelected(true));
-        sideList.add(new SideItem(getString(R.string.help_upper), true));
-        sideList.add(new SideItem(getString(R.string.help_noti), WOFragType.HELP_NOTI));
-        sideList.add(new SideItem(getString(R.string.help_setting), WOFragType.HELP_SETTING));
-        sideList.add(new SideItem(getString(R.string.statistics_upper), true));
+//        sideList.add(new SideItem(getString(R.string.help_upper), true));
+//        sideList.add(new SideItem(getString(R.string.help_noti), WOFragType.HELP_NOTI));
+//        sideList.add(new SideItem(getString(R.string.help_setting), WOFragType.HELP_SETTING));
+//        sideList.add(new SideItem(getString(R.string.statistics_upper), true));
 
         // Province
-        STTable.makeProvTable(this);
-        for (Province prov : STTable.ProvinceTable)
-            sideList.add(new SideItem(prov));
+//        STTable.makeProvTable(this);
+//        for (Province prov : STTable.ProvinceTable)
+//            sideList.add(new SideItem(prov));
         sideList.add(new SideItem(true));
         mSideList = sideList;
         return sideList;

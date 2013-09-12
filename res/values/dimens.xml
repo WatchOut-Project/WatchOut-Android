@@ -27,5 +27,11 @@
     <dimen name="post_picutre_width">120dp</dimen>
     
     <dimen name="pick_place_topbar_height">48dp</dimen>
+
+    <!-- Sign View -->
+    <dimen name="sign_view_fb_sign_bt_padding_right">10dp</dimen>
+    <dimen name="sign_view_email_text_height">61dp</dimen>
+    <dimen name="sign_view_connect_text_margin">25dp</dimen>
+    <dimen name="sign_view_connect_text_line_spacing">9dp</dimen>
     
 </resources>

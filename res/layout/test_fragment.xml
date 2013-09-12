@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/test_facebook_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Fb SgUp"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_join_party"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signin_bt_bg"
+            android:text="Jn Pt"
+            android:textColor="@color/grey_hex_d9"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_join_collection"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Jn Co"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_follow_friend"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signin_bt_bg"
+            android:text="Fol Fr"
+            android:textColor="@color/grey_hex_d9"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_connect_to_facebook"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Con Fb"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/test_balmbees"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Balmbees"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_vingle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signin_bt_bg"
+            android:text="Vingle"
+            android:textColor="@color/grey_hex_d9"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_mojitok"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Mojikok"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/test_party_notification"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Party Notification"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_collection_notification"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signin_bt_bg"
+            android:text="Collection Notification"
+            android:textColor="@color/grey_hex_d9"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/test_card_notification"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_bt_bg"
+            android:text="Card Notificatiion"
+            android:textColor="@color/grey_hex_4c"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+    </LinearLayout>    
+    
+</LinearLayout>

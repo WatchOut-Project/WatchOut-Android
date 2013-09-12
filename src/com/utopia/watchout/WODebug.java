@@ -9,7 +9,7 @@ import org.holoeverywhere.widget.Toast;
 public class WODebug {
 
     public static final boolean DEBUG = true;
-    public static final String TAG = "Watch Out";
+    public static final String TAG = "WatchOut";
 
     private WODebug() {
     }

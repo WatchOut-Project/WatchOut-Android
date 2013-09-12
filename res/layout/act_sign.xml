@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sign_background_color">
+
+        <RelativeLayout
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="55dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="90dp" >
+
+            <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="7dp"
+                    android:src="@drawable/app_title" />
+
+            <include layout="@layout/test_fragment" />
+
+            <LinearLayout
+                    android:id="@+id/sign_bt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal" >
+
+                <Button
+                        android:id="@+id/signup"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/signup_bt_bg"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/grey_hex_4c"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                <Button
+                        android:id="@+id/signin"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/signin_bt_bg"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/grey_hex_d9"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sign_view_email_text_height"
+                    android:layout_above="@id/sign_bt_layout"
+                    android:orientation="horizontal" >
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_hex_cc" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/or_use_your_email_to"
+                        android:textColor="@color/grey_hex_cc"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_hex_cc" />
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/signin_fb"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_above="@id/sign_bt_layout"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/sign_view_email_text_height"
+                    android:background="@drawable/facebook_signin_bt_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="true"
+                    android:paddingRight="@dimen/sign_view_fb_sign_bt_padding_right"
+                    android:text="@string/connect_with_facebook"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    />
+
+            <com.google.android.gms.common.SignInButton
+                    android:id="@+id/signin_gp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_above="@id/signin_fb"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/google_plus_signin_bt_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="true"
+                    android:text="@string/connect_with_google_plus"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"  />
+
+        </RelativeLayout>
+
+</RelativeLayout>

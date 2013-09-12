@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="25dp" >
+
+    <TextView
+        android:id="@+id/hey_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textColor="@color/grey_hex_99"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/once_you_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hey_username"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:maxLines="5"
+        android:singleLine="false"
+        android:text="@string/once_you_connect_vingle_to"
+        android:textColor="@color/grey_hex_99"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/already_have_account"
+        style="@style/signConnectButton"
+        android:layout_below="@id/once_you_connect"
+        android:layout_marginBottom="10dp"
+        android:text="@string/already_have_a_vingle_account" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignRight="@id/once_you_connect"
+        android:layout_below="@id/once_you_connect"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ad_button_003_more" />
+
+    <Button
+        android:id="@+id/dont_have_account"
+        style="@style/signConnectButton"
+        android:layout_below="@id/already_have_account"
+        android:text="@string/don_t_have_a_vingle_account" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignRight="@id/already_have_account"
+        android:layout_below="@id/already_have_account"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ad_button_003_more" />
+
+</RelativeLayout>

@@ -3,9 +3,11 @@ package com.utopia.watchout.fragments;
 
 import android.support.v4.app.Fragment;
 
+import com.actionbarsherlock.app.SherlockFragment;
+
 import java.util.HashMap;
 
-public class WOFragment {
+public class WOFragment extends SherlockFragment{
 
     public static String FRAGMENT_TITLE = "fragment_title";
 
@@ -40,6 +42,14 @@ public class WOFragment {
                 return new MarkerInfoFragment();
             default:
                 return null;
+        }
+    }
+
+    public String getStringWithoutException(int resId) {
+        try{
+            return getString(resId);
+        }catch(Exception e){
+            return "";
         }
     }
 }

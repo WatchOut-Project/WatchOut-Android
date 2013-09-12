@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+// It pops up keyboard to input texts and drops a cursor to a view(final View view, such as Edittext)
 public class KeyboardHelper {
 
     public static void show(final Context context, final View view) {

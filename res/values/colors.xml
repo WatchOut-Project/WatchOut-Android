@@ -3,8 +3,12 @@
 
     <color name="splash_background_color">#F5A831</color>
     <color name="wo_orange_color">#F6AD18</color>
+    <color name="sign_background_color">#FFF2CD</color>
     <color name="wo_panel_color">@color/grey_hex_88</color>
-    
+
     <!-- ActionBarGenerator -->
     <color name="pressed_watchout">#CCF6AD18</color>
+
+
+
 </resources>

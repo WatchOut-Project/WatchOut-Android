@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!-- Sign In Up -->
+        <style name="userInfoEditText">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">29dp</item>
+            <item name="android:gravity">center_vertical|left</item>
+            <item name="android:hint">@string/username</item>
+            <item name="android:includeFontPadding">false</item>
+            <item name="android:padding">0dp</item>
+            <item name="android:textColorHint">@color/grey_hex_cc</item>
+            <item name="android:background">@android:color/transparent</item>
+            <item name="android:textColor">@color/grey_hex_33</item>
+            <item name="android:inputType">text|textPersonName</item>
+            <item name="android:singleLine">true</item>
+            <item name="android:textSize">15dp</item>
+        </style>
+
+        <style name="signInUpButton" parent="android:Widget.Button">
+            <item name="android:background">@drawable/sign_btn_bg</item>
+            <item name="android:layout_height">36dp</item>
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:textColor">@color/grey_hex_33</item>
+            <item name="android:textSize">15dp</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+
+        <style name="signConnectButton" parent="android:Widget.Button">
+            <item name="android:background">@drawable/sign_connect_btn_bg</item>
+            <item name="android:layout_height">36dp</item>
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:textColor">@color/grey_hex_33</item>
+            <item name="android:paddingLeft">14dp</item>
+            <item name="android:gravity">left|center_vertical</item>
+            <item name="android:textSize">15dp</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+
+        <style name="signMainInUpButton" parent="android:Widget.Button">
+            <item name="android:background">@drawable/sign_main_btn_bg</item>
+            <item name="android:layout_height">36dp</item>
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:textColor">@color/grey_hex_33</item>
+            <item name="android:textSize">15dp</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+
+        <!-- Sign Up Process -->
+        <style name="highlightText">
+            <item name="android:textColor">@android:color/white</item>
+        </style>
+
+        <style name="underlightText">
+            <item name="android:textColor">@color/grey_hex_33</item>
+        </style>
+
+        <style name="VingleSettingMenu" parent="android:Widget.Holo.TextView">
+            <item name="android:gravity">center_vertical</item>
+            <item name="android:minHeight">50dp</item>
+            <item name="android:padding">10dp</item>
+            <item name="android:textColor">@color/grey_hex_33</item>
+            <item name="android:textSize">15dp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:background">@drawable/setting_item_background</item>
+        </style>
+
+        <style name="VinglePopupMenu" parent="Widget.Sherlock.PopupMenu">
+        </style>
+
+        <style name="VingleListPopupWindow" parent="Widget.Sherlock.Light.ListPopupWindow">
+            <item name="android:popupBackground">@drawable/ad_dropdown_menu_dropshadow</item>
+        </style>
+
+        <style name="textAppearanceVinlgePopup" parent="@style/TextAppearance.Sherlock.Widget.PopupMenu.Large">
+            <item name="android:textColor">@android:color/white</item>
+        </style>
+
+</resources>

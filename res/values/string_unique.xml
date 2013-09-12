@@ -4,7 +4,7 @@
     <string name="facebook_app_id">152781218202608</string>
     
     <!-- Google App Id -->
-    <string name="google_api_key_debug_doheum">AIzaSyDScteoLpjXLAxcqmPVUALA1ip1NM8yCeQ</string>
+    <string name="google_api_key_debug_doheum">AIzaSyBCAASwtRDnn7BdVVNyGy-KzerVh3nuv8k</string>
     <string name="google_api_key_debug">AIzaSyArJWuBnteBLXTj88UYbjwySsVNtSzWruw</string>
     <string name="google_api_key_release">AIzaSyDf2_ew5ZPYbzHwucwVDfdUXNcfQ4F_TGQ</string>
     

@@ -28,4 +28,24 @@
     <string name="senior">노년</string>
     <string name="entire_region">전체 지역</string>
 
+    <!-- Sign in and up -->
+    <string name="post_my_activity_to_facebook">나의 활동을 페이스북에 올립니다</string>
+    <string name="post_my_activity_to_gp">나의 활동을 구글플러스에 올립니다</string>
+    <string name="logo_text">스마트 안전지도 SNS</string>
+    <string name="sign_up">회원가입</string>
+    <string name="sign_in">로그인</string>
+    <string name="or_use_your_email_to">또는 이메일로</string>
+    <string name="connect_with_facebook">페이스북으로 연결하기</string>
+    <string name="connect_with_google_plus">구글 플러스로 연결하기</string>
+    <string name="continue_string">계속하기</string>
+    <string name="terms_and_conditions">이용약관</string>
+    <string name="create_account">계정 만들기</string>
+    <string name="username_or_e_mail">아이디 또는 이메일 주소</string>
+    <string name="password">비밀번호</string>
+    <string name="forgot_your_password">비밀번호를 잊으셨나요?</string>
+    <string name="create_account">계정 만들기</string>
+    <string name="username">아이디</string>
+    <string name="email_address">이메일 주소</string>
+    <string name="password_at_least">비밀번호 (최소 6자리)</string>
+    <string name="by_creating_an_account_you_agree_to_our_s">회원 가입시 %s에 동의하게 됩니다.</string>
 </resources>

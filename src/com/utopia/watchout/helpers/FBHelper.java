@@ -20,6 +20,7 @@ import com.facebook.Session;
 import com.facebook.Session.StatusCallback;
 import com.facebook.SessionState;
 import com.facebook.model.GraphObject;
+import com.facebook.model.GraphUser;
 import com.utopia.watchout.R;
 import com.utopia.watchout.WODebug;
 import com.utopia.watchout.helpers.json.FBLocationPostJson;
@@ -49,6 +50,7 @@ public class FBHelper {
     public static final List<String> PERMISSIONS_READ = Arrays.asList("user_photos", "user_status",
             "user_checkins", "read_stream");
     public static final List<String> PERMISSIONS_PUBLISH = Arrays.asList("publish_stream");
+    public static final List<String> PERMISSIONS_EMAIL = Arrays.asList("email");
 
     // /////////////////////////////////////////////////////////////////////////////////
     // Get Location data Methods (Used in GoogleMap refresh method)
