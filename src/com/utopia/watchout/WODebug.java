@@ -3,8 +3,7 @@ package com.utopia.watchout;
 
 import android.content.Context;
 import android.util.Log;
-
-import org.holoeverywhere.widget.Toast;
+import android.widget.Toast;
 
 public class WODebug {
 

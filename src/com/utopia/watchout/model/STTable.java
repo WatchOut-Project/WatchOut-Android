@@ -12,8 +12,9 @@ import java.util.Iterator;
 import java.util.TreeSet;
 
 public class STTable {
+    public static Province[] ProvinceTable = null;
     static int[] numLocals = {
-            26, 17, 9, 13, 6, 6, 6, 2, 32, 19, 13, 16, 15, 23, 24, 19, 26
+            26, 17, 9, 13, 6, 6, 6, 2, 32, 19, 13, 16, 15, 23, 24, 19, 3
     };
     static int[][] seoulStats = new int[numLocals[0]][5];
     static int[][] busanStats = new int[numLocals[1]][5];
@@ -33,24 +34,19 @@ public class STTable {
     static int[][] gyeongnamStats = new int[numLocals[15]][5];
     static int[][] jejuStats = new int[numLocals[16]][5];
 
-    // public static int[] incheonStats = {,,,,};
-
     public static int[] parsingValues(Context context, String localname, int numdiv) {
         // parsing values from excel
         ReadExcelHelper infile = new ReadExcelHelper(context, localname);
         String mTargetAge;
 
         int[] stats = new int[5];
-        for (int j = 1; j <= 5; j++)
-        {
+        for (int j = 1; j <= 5; j++) {
             mTargetAge = infile.getCell(j, numdiv);
             int num = Integer.parseInt(mTargetAge);
             stats[j - 1] = num;
         }
         return stats;
     }
-
-    public static Province[] ProvinceTable = null;
 
     public static void makeProvTable(Context context) {
         ProvinceTable = new Province[18];
@@ -247,8 +243,7 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (int i = 1; i < localNameListUnSorted.length; i++)
-                    {
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
                         String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
                     }
@@ -262,8 +257,7 @@ public class STTable {
                     // parsing values from excel
                     seoulStats[0] = parsingValues(context, "Seoul.xls",
                             localNameListUnSorted.length);
-                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
-                    {
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++) {
                         seoulStats[i + 1] = parsingValues(context, "Seoul.xls", i + 1);
                     }
 
@@ -277,625 +271,622 @@ public class STTable {
                     }
 
                     for (int i = 0; i < localNameListSorted.length; i++) {
-                        for (int j = 0; j < localListUnSorted.length; j++) {
-                            if (localNameListSorted[i].equals(localListUnSorted[j].getName()))
-                                localListSorted[i] = localListUnSorted[j];
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
                         }
                     }
                     break;
-                // case Busan:
-                // localListSorted = new Local[numLocals[1]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.busan_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[1]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // busanStats[i]=parsingValues(context,"Busan.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[1]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("busan_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID,busanStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                //
-                // break;
-                //
-                // case Daegu:
-                //
-                // localListSorted = new Local[numLocals[2]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.daegu_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[2]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i = 0; i < localNameListUnSorted.length; i++)
-                // daeguStats[i] = parsingValues(context, "Daegu.xls", i + 1);
-                //
-                // localListUnSorted = new Local[numLocals[2]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("daegu_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID,
-                // daeguStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                //
-                // case Incheon:
-                // localListSorted = new Local[numLocals[3]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.incheon_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[3]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // incheonStats[i]=parsingValues(context,"Incheon.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[3]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("incheon_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, incheonStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                //
-                // case Gwangju:
-                // localListSorted = new Local[numLocals[4]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.gwangju_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[4]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // gwangjuStats[i]=parsingValues(context,"Gwangju.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[4]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("gwangju_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, gwangjuStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Daejeon:
-                // localListSorted = new Local[numLocals[5]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.daejeon_list);
 
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[5]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // daejeonStats[i]=parsingValues(context,"Daejeon.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[5]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("daejeon_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, daejeonStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Ulsan:
-                // localListSorted = new Local[numLocals[6]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.ulsan_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[6]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // ulsanStats[i]=parsingValues(context,"Ulsan.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[6]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("ulsan_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, ulsanStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case SeJong:
-                // localListSorted = new Local[numLocals[7]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.sejong_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[7]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // sejongStats[i]=parsingValues(context,"Sejong.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[7]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("sejong_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, sejongStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Gyeonggi:
-                // localListSorted = new Local[numLocals[8]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.gyeonggi_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[8]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // gyeonggiStats[i]=parsingValues(context,"Gyeonggi.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[8]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("gyeonggi_"
-                // + i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, gyeonggiStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Gangwon:
-                // localListSorted = new Local[numLocals[9]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.gangwon_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[9]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // gangwonStats[i]=parsingValues(context,"Gangwon.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[9]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("gangwon_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, gangwonStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Chungcheongbuk:
-                // localListSorted = new Local[numLocals[10]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.chungbuk_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[10]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // chungbukStats[i]=parsingValues(context,"Chungbuk.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[10]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("chungbuk_"
-                // + i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, chungbukStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Chungcheongnam:
-                // localListSorted = new Local[numLocals[11]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.chungnam_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[11]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // chungnamStats[i]=parsingValues(context,"Chungnam.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[11]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("chungnam_"
-                // + i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, chungnamStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Jeollabuk:
-                // localListSorted = new Local[numLocals[12]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.jeonbuk_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[12]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // jeonbukStats[i]=parsingValues(context,"Jeonbuk.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[12]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("jeonbuk_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, jeonbukStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Jeollanam:
-                // localListSorted = new Local[numLocals[13]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.jeonnam_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[13]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // jeonnamStats[i]=parsingValues(context,"Jeonnam.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[13]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("jeonnam_" +
-                // i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, jeonnamStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Gyeongsangbuk:
-                // localListSorted = new Local[numLocals[14]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.gyeongbuk_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[14]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // gyeongbukStats[i]=parsingValues(context,"Gyeongbuk.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[14]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("gyeongbuk_"
-                // + i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, gyeongbukStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Gyeongsangnam:
-                // localListSorted = new Local[numLocals[15]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.gyeongnam_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[15]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // gyeongnamStats[i]=parsingValues(context,"Gyeongnam.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[15]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("gyeongnam_"
-                // + i, "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, gyeongnamStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
-                // case Jeju:
-                // localListSorted = new Local[numLocals[16]];
-                // localNameListUnSorted =
-                // context.getResources().getStringArray(
-                // R.array.jeju_list);
-                //
-                // localNameCollection = new TreeSet<String>(
-                // Collator.getInstance());
-                // for (String name : localNameListUnSorted)
-                // localNameCollection.add(name);
-                //
-                // localNameListSorted = new String[numLocals[16]];
-                // iter = localNameCollection.iterator();
-                // iterCount = 0;
-                // while (iter.hasNext())
-                // localNameListSorted[iterCount++] = iter.next();
-                //
-                // // parsing values from excel
-                // for (int i=0;i<localNameListUnSorted.length;i++)
-                // jejuStats[i]=parsingValues(context,"Jeju.xls",i+1);
-                //
-                // localListUnSorted = new Local[numLocals[16]];
-                // for (int i = 0; i < localNameListUnSorted.length; i++) {
-                // int resID = context.getResources().getIdentifier("jeju_" + i,
-                // "drawable",
-                // context.getPackageName());
-                // WODebug.LogDebug("redid : " + resID);
-                // localListUnSorted[i] = new Local(localNameListUnSorted[i],
-                // resID, jejuStats[i]);
-                // }
-                //
-                // for (int i = 0; i < localNameListSorted.length; i++) {
-                // for (Local local : localListUnSorted) {
-                // if (localNameListSorted[i].equals(local.getName()))
-                // localListSorted[i] = local;
-                // }
-                // }
-                // break;
+                case Busan:
+                    localListSorted = new Local[numLocals[1]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.busan_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[1]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        busanStats[i] = parsingValues(context, "Busan.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[1]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("busan_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, busanStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Daegu:
+                    localListSorted = new Local[numLocals[2]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.daegu_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[2]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        daeguStats[i] = parsingValues(context, "Daegu.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[2]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("daegu_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID,
+                                daeguStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+//                case Incheon:
+//                    localListSorted = new Local[numLocals[3]];
+//                    localNameListUnSorted =
+//                            context.getResources().getStringArray(
+//                                    R.array.incheon_list);
+//
+//                    localNameCollection = new TreeSet<String>(
+//                            Collator.getInstance());
+//                    for (String name : localNameListUnSorted)
+//                        localNameCollection.add(name);
+//
+//                    localNameListSorted = new String[numLocals[3]];
+//                    iter = localNameCollection.iterator();
+//                    iterCount = 0;
+//                    while (iter.hasNext())
+//                        localNameListSorted[iterCount++] = iter.next();
+//
+//                    // parsing values from excel
+//                    for (int i = 0; i < localNameListUnSorted.length; i++)
+//                        incheonStats[i] = parsingValues(context, "Incheon.xls", i + 1);
+//
+//                    localListUnSorted = new Local[numLocals[3]];
+//                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+//                        int resID = context.getResources().getIdentifier("incheon_" +
+//                                i, "drawable",
+//                                context.getPackageName());
+//                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+//                                resID, incheonStats[i]);
+//                    }
+//
+//                    for (int i = 0; i < localNameListSorted.length; i++) {
+//                        for (Local local : localListUnSorted) {
+//                            if (localNameListSorted[i].equals(local.getName()))
+//                                localListSorted[i] = local;
+//                        }
+//                    }
+//                    break;
+
+                case Gwangju:
+                    localListSorted = new Local[numLocals[4]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.gwangju_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[4]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        gwangjuStats[i] = parsingValues(context, "Gwangju.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[4]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("gwangju_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, gwangjuStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Daejeon:
+                    localListSorted = new Local[numLocals[5]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.daejeon_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[5]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        daejeonStats[i] = parsingValues(context, "Daejeon.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[5]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("daejeon_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, daejeonStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Ulsan:
+                    localListSorted = new Local[numLocals[6]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.ulsan_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[6]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        ulsanStats[i] = parsingValues(context, "Ulsan.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[6]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("ulsan_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, ulsanStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case SeJong:
+                    localListSorted = new Local[numLocals[7]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.sejong_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[7]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        sejongStats[i] = parsingValues(context, "Sejong.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[7]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("sejong_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, sejongStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Gyeonggi:
+                    localListSorted = new Local[numLocals[8]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.gyeonggi_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[8]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        gyeonggiStats[i] = parsingValues(context, "Gyeonggi.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[8]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("gyeonggi_"
+                                + i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, gyeonggiStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Gangwon:
+                    localListSorted = new Local[numLocals[9]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.gangwon_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[9]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        gangwonStats[i] = parsingValues(context, "Gangwon.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[9]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("gangwon_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, gangwonStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Chungcheongbuk:
+                    localListSorted = new Local[numLocals[10]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.chungbuk_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[10]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        chungbukStats[i] = parsingValues(context, "Chungbuk.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[10]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("chungbuk_"
+                                + i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, chungbukStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+//                case Chungcheongnam:
+//                    localListSorted = new Local[numLocals[11]];
+//                    localNameListUnSorted =
+//                            context.getResources().getStringArray(
+//                                    R.array.chungnam_list);
+//
+//                    localNameCollection = new TreeSet<String>(
+//                            Collator.getInstance());
+//                    for (String name : localNameListUnSorted)
+//                        localNameCollection.add(name);
+//
+//                    localNameListSorted = new String[numLocals[11]];
+//                    iter = localNameCollection.iterator();
+//                    iterCount = 0;
+//                    while (iter.hasNext())
+//                        localNameListSorted[iterCount++] = iter.next();
+//
+//                    // parsing values from excel
+//                    for (int i = 0; i < localNameListUnSorted.length; i++)
+//                        chungnamStats[i] = parsingValues(context, "Chungnam.xls", i + 1);
+//
+//                    localListUnSorted = new Local[numLocals[11]];
+//                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+//                        int resID = context.getResources().getIdentifier("chungnam_"
+//                                + i, "drawable",
+//                                context.getPackageName());
+//                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+//                                resID, chungnamStats[i]);
+//                    }
+//
+//                    for (int i = 0; i < localNameListSorted.length; i++) {
+//                        for (Local local : localListUnSorted) {
+//                            if (localNameListSorted[i].equals(local.getName()))
+//                                localListSorted[i] = local;
+//                        }
+//                    }
+//                    break;
+
+                case Jeollabuk:
+                    localListSorted = new Local[numLocals[12]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.jeonbuk_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[12]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        jeonbukStats[i] = parsingValues(context, "Jeonbuk.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[12]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("jeonbuk_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, jeonbukStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Jeollanam:
+                    localListSorted = new Local[numLocals[13]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.jeonnam_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[13]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        jeonnamStats[i] = parsingValues(context, "Jeonnam.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[13]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("jeonnam_" +
+                                i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, jeonnamStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Gyeongsangbuk:
+                    localListSorted = new Local[numLocals[14]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.gyeongbuk_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[14]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        gyeongbukStats[i] = parsingValues(context, "Gyeongbuk.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[14]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("gyeongbuk_"
+                                + i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, gyeongbukStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Gyeongsangnam:
+                    localListSorted = new Local[numLocals[15]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.gyeongnam_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[15]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        gyeongnamStats[i] = parsingValues(context, "Gyeongnam.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[15]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("gyeongnam_"
+                                + i, "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, gyeongnamStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
+                case Jeju:
+                    localListSorted = new Local[numLocals[16]];
+                    localNameListUnSorted =
+                            context.getResources().getStringArray(
+                                    R.array.jeju_list);
+
+                    localNameCollection = new TreeSet<String>(
+                            Collator.getInstance());
+                    for (String name : localNameListUnSorted)
+                        localNameCollection.add(name);
+
+                    localNameListSorted = new String[numLocals[16]];
+                    iter = localNameCollection.iterator();
+                    iterCount = 0;
+                    while (iter.hasNext())
+                        localNameListSorted[iterCount++] = iter.next();
+
+                    // parsing values from excel
+                    for (int i = 0; i < localNameListUnSorted.length; i++)
+                        jejuStats[i] = parsingValues(context, "Jeju.xls", i + 1);
+
+                    localListUnSorted = new Local[numLocals[16]];
+                    for (int i = 0; i < localNameListUnSorted.length; i++) {
+                        int resID = context.getResources().getIdentifier("jeju_" + i,
+                                "drawable",
+                                context.getPackageName());
+                        localListUnSorted[i] = new Local(localNameListUnSorted[i],
+                                resID, jejuStats[i]);
+                    }
+
+                    for (int i = 0; i < localNameListSorted.length; i++) {
+                        for (Local local : localListUnSorted) {
+                            if (localNameListSorted[i].equals(local.getName()))
+                                localListSorted[i] = local;
+                        }
+                    }
+                    break;
+
                 default:
                     break;
             }

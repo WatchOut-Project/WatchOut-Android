@@ -68,14 +68,22 @@
     <!-- Busan List -->
     <string-array name="busan_list">
         <item>부산 전지역</item>
+        <item>강서구</item>
+        <item>금정구</item>
+        <item>기장군</item>
         <item>남구</item>
-        <item>달서구</item>
-        <item>달성군</item>
         <item>동구</item>
+        <item>동래구</item>
+        <item>부산진구</item>
         <item>북구</item>
+        <item>사상구</item>
+        <item>사하구</item>
         <item>서구</item>
-        <item>수성구</item>
+        <item>수영구</item>
+        <item>연제구</item>
+        <item>영도구</item>
         <item>중구</item>
+        <item>해운대구</item>
     </string-array>
 
     <!-- Incheon List -->
@@ -141,7 +149,6 @@
         <item>괴산군</item>
         <item>단양군</item>
         <item>보은군</item>
-        <item>울주군</item>
         <item>영동군</item>
         <item>옥천군</item>
         <item>음성군</item>
@@ -175,11 +182,13 @@
 
     <!-- Sejong List -->
     <string-array name="sejong_list">
+        <item>세종 전지역</item>
         <item>세종시</item>
     </string-array>
 
     <!-- Gyeongbook List -->
     <string-array name="gyeongbuk_list">
+        <item>경북 전지역</item>
         <item>경산시</item>
         <item>경주시</item>
         <item>고령군</item>
@@ -203,10 +212,12 @@
         <item>청송군</item>
         <item>칠곡군</item>
         <item>포항시</item>
+
     </string-array>
 
     <!-- Gyeonggi List -->
     <string-array name="gyeonggi_list">
+        <item>경기 전지역</item>
         <item>가평군</item>
         <item>고양시</item>
         <item>과천시</item>
@@ -242,102 +253,88 @@
 
     <!-- Jeonnam List -->
     <string-array name="jeonnam_list">
-        <item>충남 전지역</item>
-        <item>계룡시</item>
-        <item>공주시</item>
-        <item>금산군</item>
-        <item>논산시</item>
-        <item>당진시</item>
-        <item>보령시</item>
-        <item>부여군</item>
-        <item>서산시</item>
-        <item>서천군</item>
-        <item>아산시</item>
-        <item>예산군</item>
-        <item>천안시</item>
-        <item>청양군</item>
-        <item>태안군</item>
-        <item>홍성군</item>
+        <item>전남 전지역</item>
+        <item>강진군</item>
+        <item>고흥군</item>
+        <item>곡성군</item>
+        <item>광양시</item>
+        <item>구례군</item>
+        <item>나주시</item>
+        <item>담양군</item>
+        <item>목포시</item>
+        <item>무안군</item>
+        <item>보성군</item>
+        <item>순천시</item>
+        <item>신안군</item>
+        <item>여수시</item>
+        <item>영광군</item>
+        <item>영암군</item>
+        <item>완도군</item>
+        <item>장성군</item>
+        <item>장흥군</item>
+        <item>진도군</item>
+        <item>함평군</item>
+        <item>해남군</item>
+        <item>화순군</item>
     </string-array>
 
     <!-- Jeonbuk List -->
     <string-array name="jeonbuk_list">
-        <item>충남 전지역</item>
-        <item>계룡시</item>
-        <item>공주시</item>
-        <item>금산군</item>
-        <item>논산시</item>
-        <item>당진시</item>
-        <item>보령시</item>
-        <item>부여군</item>
-        <item>서산시</item>
-        <item>서천군</item>
-        <item>아산시</item>
-        <item>예산군</item>
-        <item>천안시</item>
-        <item>청양군</item>
-        <item>태안군</item>
-        <item>홍성군</item>
+        <item>전북 전지역</item>
+        <item>고창군</item>
+        <item>군산시</item>
+        <item>김제시</item>
+        <item>남원시</item>
+        <item>무주군</item>
+        <item>부안군</item>
+        <item>순창군</item>
+        <item>완주군</item>
+        <item>익산시</item>
+        <item>임실군</item>
+        <item>장수군</item>
+        <item>전주시</item>
+        <item>정읍시</item>
+        <item>진안군</item>
     </string-array>
 
     <!-- Jeju List -->
     <string-array name="jeju_list">
-        <item>충남 전지역</item>
-        <item>계룡시</item>
-        <item>공주시</item>
-        <item>금산군</item>
-        <item>논산시</item>
-        <item>당진시</item>
-        <item>보령시</item>
-        <item>부여군</item>
-        <item>서산시</item>
-        <item>서천군</item>
-        <item>아산시</item>
-        <item>예산군</item>
-        <item>천안시</item>
-        <item>청양군</item>
-        <item>태안군</item>
-        <item>홍성군</item>
+        <item>제주 전지역</item>
+        <item>서귀포시</item>
+        <item>제주시</item>
     </string-array>
 
     <!-- Gyeongnam List -->
     <string-array name="gyeongnam_list">
-        <item>충남 전지역</item>
-        <item>계룡시</item>
-        <item>공주시</item>
-        <item>금산군</item>
-        <item>논산시</item>
-        <item>당진시</item>
-        <item>보령시</item>
-        <item>부여군</item>
-        <item>서산시</item>
-        <item>서천군</item>
-        <item>아산시</item>
-        <item>예산군</item>
-        <item>천안시</item>
-        <item>청양군</item>
-        <item>태안군</item>
-        <item>홍성군</item>
+        <item>경남 전지역</item>
+        <item>거제시</item>
+        <item>거창군</item>
+        <item>고성군</item>
+        <item>김해시</item>
+        <item>남해군</item>
+        <item>밀양시</item>
+        <item>사천시</item>
+        <item>산청군</item>
+        <item>양산시</item>
+        <item>의령군</item>
+        <item>진주시</item>
+        <item>창년군</item>
+        <item>창원시</item>
+        <item>통영시</item>
+        <item>하동군</item>
+        <item>함안군</item>
+        <item>함양군</item>
+        <item>합천군</item>
     </string-array>
 
     <!-- Gwangju List -->
     <string-array name="gwangju_list">
-        <item>충남 전지역</item>
-        <item>계룡시</item>
-        <item>공주시</item>
-        <item>금산군</item>
-        <item>논산시</item>
-        <item>당진시</item>
-        <item>보령시</item>
-        <item>부여군</item>
-        <item>서산시</item>
-        <item>서천군</item>
-        <item>아산시</item>
-        <item>예산군</item>
-        <item>천안시</item>
-        <item>청양군</item>
-        <item>태안군</item>
-        <item>홍성군</item>
+        <item>광주 전지역</item>
+        <item>광산구</item>
+        <item>남구</item>
+        <item>동구</item>
+        <item>북구</item>
+        <item>서구</item>
     </string-array>
 
 </resources>

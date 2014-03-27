@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_hex_ff" >
+    android:background="@color/wo_orange_color" >
 
     <ImageView
         android:id="@+id/splash_image"

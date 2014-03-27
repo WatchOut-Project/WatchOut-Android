@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/seoul_bg"/>
+                android:background="@null"/>
 
             <ImageView
                 android:id="@+id/st_main_image"

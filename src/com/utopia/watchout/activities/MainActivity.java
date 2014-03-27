@@ -148,7 +148,7 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
 
             case HELP_NOTI:
                 DialogFragment dialogFrag = (DialogFragment) WOFragment.createWOFragment(type);
-                dialogFrag.show(fm, dialogFrag.getClass().getSimpleName());
+                dialogFrag.show(fm, ((Object)dialogFrag).getClass().getSimpleName());
                 listener.onBackStackChanged();
                 break;
 
@@ -164,8 +164,8 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
                     Bundle args = new Bundle();
                     args.putString(WOFragment.FRAGMENT_TITLE, title);
                     frag.setArguments(args);
-                    ft.add(R.id.content, frag, frag.getClass().getSimpleName());
-                    ft.addToBackStack(frag.getClass().getSimpleName());
+                    ft.add(R.id.content, frag, ((Object)frag).getClass().getSimpleName());
+                    ft.addToBackStack(((Object)frag).getClass().getSimpleName());
                     ft.commit();
                     setContentBackground(true);
                 } else
@@ -182,8 +182,8 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
         Bundle args = new Bundle();
         args.putString(WOFragment.FRAGMENT_TITLE, markerInfo.getLocationName());
         frag.setArguments(args);
-        ft.add(R.id.content, frag, frag.getClass().getSimpleName());
-        ft.addToBackStack(frag.getClass().getSimpleName());
+        ft.add(R.id.content, frag, ((Object)frag).getClass().getSimpleName());
+        ft.addToBackStack(((Object)frag).getClass().getSimpleName());
         ft.commit();
     }
 
@@ -248,15 +248,15 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
         ArrayList<SideItem> sideList = new ArrayList<SideItem>();
         sideList.add(new SideItem(true));
         sideList.add(new SideItem(getString(R.string.map), WOFragType.NULL).setSelected(true));
-//        sideList.add(new SideItem(getString(R.string.help_upper), true));
-//        sideList.add(new SideItem(getString(R.string.help_noti), WOFragType.HELP_NOTI));
-//        sideList.add(new SideItem(getString(R.string.help_setting), WOFragType.HELP_SETTING));
-//        sideList.add(new SideItem(getString(R.string.statistics_upper), true));
+        sideList.add(new SideItem(getString(R.string.help_upper), true));
+        sideList.add(new SideItem(getString(R.string.help_noti), WOFragType.HELP_NOTI));
+        sideList.add(new SideItem(getString(R.string.help_setting), WOFragType.HELP_SETTING));
+        sideList.add(new SideItem(getString(R.string.statistics_upper), true));
 
         // Province
-//        STTable.makeProvTable(this);
-//        for (Province prov : STTable.ProvinceTable)
-//            sideList.add(new SideItem(prov));
+        STTable.makeProvTable(this);
+        for (Province prov : STTable.ProvinceTable)
+            sideList.add(new SideItem(prov));
         sideList.add(new SideItem(true));
         mSideList = sideList;
         return sideList;

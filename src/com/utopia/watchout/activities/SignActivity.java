@@ -21,7 +21,7 @@ public class SignActivity extends Activity implements View.OnClickListener,
     private static final int REQUEST_CODE_RESOLVE_ERR = 9000;
 
     private ProgressDialog mConnectionProgressDialog;
-    private PlusClient mPlusClient;
+//    private PlusClient mPlusClient;
     private ConnectionResult mConnectionResult;
     private SignInButton mSignInGp;
 
@@ -32,9 +32,9 @@ public class SignActivity extends Activity implements View.OnClickListener,
 
         mSignInGp=(SignInButton)findViewById(R.id.signin_gp);
         mSignInGp.setOnClickListener(this);
-        mPlusClient = new PlusClient.Builder(this, this, this)
-                .setVisibleActivities("http://schemas.google.com/AddActivity", "http://schemas.google.com/BuyActivity")
-                .build();
+//        mPlusClient = new PlusClient.Builder(this, this, this)
+//                .setVisibleActivities("http://schemas.google.com/AddActivity", "http://schemas.google.com/BuyActivity")
+//                .build();
         // Progress bar to be displayed if the connection failure is not resolved.
         mConnectionProgressDialog = new ProgressDialog(this);
         mConnectionProgressDialog.setMessage("Signing in...");
@@ -47,13 +47,13 @@ public class SignActivity extends Activity implements View.OnClickListener,
     @Override
     protected void onStart() {
         super.onStart();
-        mPlusClient.connect();
+//        mPlusClient.connect();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mPlusClient.disconnect();
+//        mPlusClient.disconnect();
     }
 
     @Override
@@ -66,7 +66,7 @@ public class SignActivity extends Activity implements View.OnClickListener,
                 try {
                     result.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
                 } catch (IntentSender.SendIntentException e) {
-                    mPlusClient.connect();
+//                    mPlusClient.connect();
                 }
             }
         }
@@ -78,14 +78,14 @@ public class SignActivity extends Activity implements View.OnClickListener,
     protected void onActivityResult(int requestCode, int responseCode, Intent intent) {
         if (requestCode == REQUEST_CODE_RESOLVE_ERR && responseCode == RESULT_OK) {
             mConnectionResult = null;
-            mPlusClient.connect();
+//            mPlusClient.connect();
         }
     }
 
     @Override
     public void onConnected(Bundle connectionHint) {
-        String accountName = mPlusClient.getAccountName();
-        Toast.makeText(this, accountName + " is connected.", Toast.LENGTH_LONG).show();
+//        String accountName = mPlusClient.getAccountName();
+//        Toast.makeText(this, accountName + " is connected.", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -95,18 +95,18 @@ public class SignActivity extends Activity implements View.OnClickListener,
 
     @Override
     public void onClick(View view) {
-            if (view.getId() == R.id.signin_gp && !mPlusClient.isConnected()) {
-                if (mConnectionResult == null) {
-                    mConnectionProgressDialog.show();
-                } else {
-                    try {
-                        mConnectionResult.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
-                    } catch (IntentSender.SendIntentException e) {
-                        // Try connecting again.
-                        mConnectionResult = null;
-                        mPlusClient.connect();
-                    }
-                }
-            }
+//            if (view.getId() == R.id.signin_gp && !mPlusClient.isConnected()) {
+//                if (mConnectionResult == null) {
+//                    mConnectionProgressDialog.show();
+//                } else {
+//                    try {
+//                        mConnectionResult.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
+//                    } catch (IntentSender.SendIntentException e) {
+//                        // Try connecting again.
+//                        mConnectionResult = null;
+//                        mPlusClient.connect();
+//                    }
+//                }
+//            }
     }
 }

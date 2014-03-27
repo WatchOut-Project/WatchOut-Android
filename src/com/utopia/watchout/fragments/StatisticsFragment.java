@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
 import com.actionbarsherlock.app.SherlockFragment;
@@ -34,9 +35,7 @@ public class StatisticsFragment extends SherlockFragment implements
     String mTitle = null;
     Province mProv = null;
     int mItemPosition = 0;
-
     ImageView mMainImage;
-
     LinearLayout mStatisticsLaytout;
     TextView mChildCount;
     View mChildBar;
@@ -48,6 +47,7 @@ public class StatisticsFragment extends SherlockFragment implements
     View mAdultBar;
     TextView mSeniorCount;
     View mSeniorBar;
+    ImageView mBGImage;
 
     @Override
     public void onAttach(Activity activity) {
@@ -67,7 +67,7 @@ public class StatisticsFragment extends SherlockFragment implements
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_statistics, container,
                 false);
         view.findViewById(R.id.st_layout).setMinimumHeight(
@@ -87,6 +87,9 @@ public class StatisticsFragment extends SherlockFragment implements
         mAdultBar = view.findViewById(R.id.st_adult_bar);
         mSeniorCount = (TextView) view.findViewById(R.id.st_senior_count);
         mSeniorBar = view.findViewById(R.id.st_senior_bar);
+
+        mBGImage = (ImageView) view.findViewById(R.id.st_main_image_bg);
+        setBG();
 
         return view;
     }
@@ -139,6 +142,67 @@ public class StatisticsFragment extends SherlockFragment implements
         return false;
     }
 
+    private void setBG() {
+        switch (mProv.getType()) {
+            case SouthKorea:
+                mBGImage.setBackgroundResource(R.drawable.southkorea);
+                break;
+            case Seoul:
+                mBGImage.setBackgroundResource(R.drawable.seoul_bg);
+                break;
+            case Busan:
+                mBGImage.setBackgroundResource(R.drawable.busan_bg);
+                break;
+            case Daegu:
+                mBGImage.setBackgroundResource(R.drawable.daegu_bg);
+                break;
+            case Incheon:
+                mBGImage.setBackgroundResource(R.drawable.incheon_bg);
+                break;
+            case Gwangju:
+                mBGImage.setBackgroundResource(R.drawable.gwangju_bg);
+                break;
+            case Daejeon:
+                mBGImage.setBackgroundResource(R.drawable.daejeon_bg);
+                break;
+            case Ulsan:
+                mBGImage.setBackgroundResource(R.drawable.ulsan_bg);
+                break;
+            case SeJong:
+                mBGImage.setBackgroundResource(R.drawable.sejong_0);
+                break;
+            case Gyeonggi:
+                mBGImage.setBackgroundResource(R.drawable.gyeonggi_bg);
+                break;
+            case Gangwon:
+                mBGImage.setBackgroundResource(R.drawable.gangwon_bg);
+                break;
+            case Chungcheongbuk:
+                mBGImage.setBackgroundResource(R.drawable.chungbuk_bg);
+                break;
+//            case Chungcheongnam:
+//                mBGImage.setBackgroundResource(R.drawable.c);
+//                break;
+            case Jeollabuk:
+                mBGImage.setBackgroundResource(R.drawable.jeonbuk_bg);
+                break;
+            case Jeollanam:
+                mBGImage.setBackgroundResource(R.drawable.jeonnam_bg);
+                break;
+            case Gyeongsangbuk:
+                mBGImage.setBackgroundResource(R.drawable.gyeongbuk_bg);
+                break;
+            case Gyeongsangnam:
+                mBGImage.setBackgroundResource(R.drawable.gyeongnam_bg);
+                break;
+            case Jeju:
+                mBGImage.setBackgroundResource(R.drawable.jeju_bg);
+                break;
+            default:
+                break;
+        }
+    }
+
     public void resetView(ProvinceType type, int position) {
 
         Local local = mProv.getLocalList()[position];
@@ -146,7 +210,7 @@ public class StatisticsFragment extends SherlockFragment implements
         float height = mStatisticsLaytout.getHeight()
                 - mChildCount.getHeight()
                 - mStatisticsLaytout.findViewById(R.id.st_child_name)
-                        .getHeight();
+                .getHeight();
 
         float local_max = (float) 0.0;
 

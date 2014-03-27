@@ -193,7 +193,7 @@ public class MapBasedSNSFragment extends SupportMapFragment implements OnCameraC
 
     private void addPlacePickerAround(double latitude, double longitude, int zoom) {
 
-        Location location = new Location(getClass().getName());
+        Location location = new Location(((Object)this).getClass().getName());
         location.setLatitude(latitude);
         location.setLongitude(longitude);
 

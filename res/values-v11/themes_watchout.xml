@@ -27,8 +27,8 @@
         <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb_holo</item>
 
         <!-- AlertDialog -->
-        <item name="android:alertDialogStyle">@style/Holo.AlertDialog</item>
-        <item name="android:alertDialogTheme">@style/Holo.Theme.Dialog.Alert</item>
+        <!--<item name="android:alertDialogStyle">@style/Holo.AlertDialog</item>-->
+        <!--<item name="android:alertDialogTheme">@style/Holo.Theme.Dialog.Alert</item>-->
     </style>
     
     <style name="Theme.Watchout.Up" parent="@style/Theme.Watchout">

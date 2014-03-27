@@ -59,7 +59,7 @@
 
             <ProgressBar
                 android:id="@+id/item_loading"
-                style="@style/Holo.ProgressBar.Large"
+                style="@style/Widget.Sherlock.ProgressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
