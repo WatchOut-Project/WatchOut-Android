@@ -286,18 +286,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[1]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        busanStats[i] = parsingValues(context, "Busan.xls", i + 1);
+                    busanStats[0] = parsingValues(context, "Busan.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        busanStats[i + 1] = parsingValues(context, "Busan.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[1]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -324,18 +328,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[2]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        daeguStats[i] = parsingValues(context, "Daegu.xls", i + 1);
+                    daeguStats[0] = parsingValues(context, "Daegu.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        daeguStats[i+1] = parsingValues(context, "Daegu.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[2]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -401,18 +409,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[4]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        gwangjuStats[i] = parsingValues(context, "Gwangju.xls", i + 1);
+                    gwangjuStats[0] = parsingValues(context, "Gwangju.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        gwangjuStats[i+1] = parsingValues(context, "Gwangju.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[4]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -439,18 +451,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[5]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        daejeonStats[i] = parsingValues(context, "Daejeon.xls", i + 1);
+                    daejeonStats[0] = parsingValues(context, "Daejeon.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        daejeonStats[i+1] = parsingValues(context, "Daejeon.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[5]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -477,18 +493,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[6]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        ulsanStats[i] = parsingValues(context, "Ulsan.xls", i + 1);
+                    ulsanStats[0] = parsingValues(context, "Ulsan.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        ulsanStats[i+1] = parsingValues(context, "Ulsan.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[6]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -515,18 +535,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[7]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        sejongStats[i] = parsingValues(context, "Sejong.xls", i + 1);
+                    sejongStats[0] = parsingValues(context, "Sejong.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        sejongStats[i+1] = parsingValues(context, "Sejong.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[7]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -553,18 +577,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[8]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        gyeonggiStats[i] = parsingValues(context, "Gyeonggi.xls", i + 1);
+                    gyeonggiStats[0] = parsingValues(context, "Gyeonggi.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        gyeonggiStats[i+1] = parsingValues(context, "Gyeonggi.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[8]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -591,18 +619,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[9]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        gangwonStats[i] = parsingValues(context, "Gangwon.xls", i + 1);
+                    gangwonStats[0] = parsingValues(context, "Gangwon.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        gangwonStats[i+1] = parsingValues(context, "Gangwon.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[9]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -629,18 +661,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[10]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        chungbukStats[i] = parsingValues(context, "Chungbuk.xls", i + 1);
+                    chungbukStats[0] = parsingValues(context, "Chungbuk.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        chungbukStats[i+1] = parsingValues(context, "Chungbuk.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[10]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -705,18 +741,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[12]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        jeonbukStats[i] = parsingValues(context, "Jeonbuk.xls", i + 1);
+                    jeonbukStats[0] = parsingValues(context, "Jeonbuk.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        jeonbukStats[i+1] = parsingValues(context, "Jeonbuk.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[12]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -743,18 +783,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[13]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        jeonnamStats[i] = parsingValues(context, "Jeonnam.xls", i + 1);
+                    jeonnamStats[0] = parsingValues(context, "Jeonnam.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        jeonnamStats[i+1] = parsingValues(context, "Jeonnam.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[13]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -781,18 +825,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[14]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        gyeongbukStats[i] = parsingValues(context, "Gyeongbuk.xls", i + 1);
+                    gyeongbukStats[0] = parsingValues(context, "Gyeongbuk.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        gyeongbukStats[i+1] = parsingValues(context, "Gyeongbuk.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[14]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -819,18 +867,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[15]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        gyeongnamStats[i] = parsingValues(context, "Gyeongnam.xls", i + 1);
+                    gyeongnamStats[0] = parsingValues(context, "Gyeongnam.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        gyeongnamStats[i+1] = parsingValues(context, "Gyeongnam.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[15]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {
@@ -857,18 +909,22 @@ public class STTable {
 
                     localNameCollection = new TreeSet<String>(
                             Collator.getInstance());
-                    for (String name : localNameListUnSorted)
+                    for (int i = 1; i < localNameListUnSorted.length; i++) {
+                        String name = localNameListUnSorted[i];
                         localNameCollection.add(name);
-
+                    }
                     localNameListSorted = new String[numLocals[16]];
                     iter = localNameCollection.iterator();
-                    iterCount = 0;
+                    iterCount = 1;
+                    localNameListSorted[0] = localNameListUnSorted[0];
                     while (iter.hasNext())
                         localNameListSorted[iterCount++] = iter.next();
 
                     // parsing values from excel
-                    for (int i = 0; i < localNameListUnSorted.length; i++)
-                        jejuStats[i] = parsingValues(context, "Jeju.xls", i + 1);
+                    jejuStats[0] = parsingValues(context, "Jeju.xls",
+                            localNameListUnSorted.length);
+                    for (int i = 0; i < localNameListUnSorted.length - 1; i++)
+                        jejuStats[i+1] = parsingValues(context, "Jeju.xls", i + 1);
 
                     localListUnSorted = new Local[numLocals[16]];
                     for (int i = 0; i < localNameListUnSorted.length; i++) {

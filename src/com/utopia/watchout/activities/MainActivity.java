@@ -182,7 +182,7 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
         Bundle args = new Bundle();
         args.putString(WOFragment.FRAGMENT_TITLE, markerInfo.getLocationName());
         frag.setArguments(args);
-        ft.add(R.id.content, frag, ((Object)frag).getClass().getSimpleName());
+        ft.add(R.id.content, frag, ((Object) frag).getClass().getSimpleName());
         ft.addToBackStack(((Object)frag).getClass().getSimpleName());
         ft.commit();
     }
@@ -256,6 +256,9 @@ public class MainActivity extends SherlockFragmentActivity implements OnMarkerCl
         // Province
         STTable.makeProvTable(this);
         for (Province prov : STTable.ProvinceTable)
+            if (prov.getType() != STTable.ProvinceType.SouthKorea
+                    && prov.getType() != STTable.ProvinceType.Incheon
+                    && prov.getType() != STTable.ProvinceType.Chungcheongnam)
             sideList.add(new SideItem(prov));
         sideList.add(new SideItem(true));
         mSideList = sideList;

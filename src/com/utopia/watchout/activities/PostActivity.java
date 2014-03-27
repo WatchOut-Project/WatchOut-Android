@@ -282,8 +282,9 @@ public class PostActivity extends SherlockFragmentActivity {
                 finish();
                 return true;
             case R.id.menu_post:
-                FBHelper.publishStatus(this, mReqListener,
-                        mContentTv.getText().toString(), mImagePath, mPlaceId);
+//                FBHelper.publishStatus(this, mReqListener,
+//                        mContentTv.getText().toString(), mImagePath, mPlaceId);
+                WOToast.show(getApplicationContext(), "Currently posting is not supported.");
                 return true;
             case R.id.menu_pick_place:
                 startPickPlaceActivity();

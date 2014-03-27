@@ -113,7 +113,7 @@
         <!-- Google Map API Settings -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/google_api_key_debug" />
+            android:value="@string/google_api_key_release" />
 
         <!-- Facebook API Settings -->
         <meta-data

@@ -43,7 +43,7 @@ import java.util.List;
 public class FBHelper {
 
     protected static final String TAG = "FacebookHelper";
-    private final static String INITIAL_ACCESS_TOKEN = "CAACK9CY9QZCABANLBw0mLTkgzRVMMMxJA8DQIA1tJD8KGDBfwstRg0fY4knYJkPUIpXhmOkau4fJ26u6ozZBDHZBG5Wg0UmxUZBv7E9CRkqDQooV7bZBOGXZBBaZApi1omOUpN4GzyQEBVmANP1YtUTIjpTp6N7cZCcygxiVxTloG3qL5TpobeVUZAoqNgOxsW9NnuP6gyiAFrTAJhBUpuyXZCdghU7ZBkwtuJZA18uUTV9ZBExRnBfnuRIA0";
+    private final static String INITIAL_ACCESS_TOKEN = "CAACEdEose0cBAIggoNF6CIfuPyVgf6SjHRb23gWxfzhvjK5xmKTmZBhcVUYjFk0FJrLZAB0ZCPPxZB669MyHQ4SfuOPkLNLvZCYrtgGZACn40UoDu9svG7ZBJ2PZAQVZB1CflUsOAGsdSrVk4yY2tkTXOxuSgK6Fd96ZBZCdnA2iU9QORZBy77YoHteNYXwqHGTdRCROhnv2qqEsyAZDZD";
     public static final List<String> PERMISSIONS_ACCESSTOKEN = Arrays.asList("user_photos",
             "user_status",
             "user_checkins", "read_stream", "publish_stream");
@@ -201,7 +201,7 @@ public class FBHelper {
                 if (place_id != null)
                     postParams.putLong("place", Long.parseLong(place_id));
 
-                Request request = new Request(session, "me/photos", postParams,
+                Request request = new Request(session, "/me/photos", postParams,
                         HttpMethod.POST, new Callback() {
 
                             @Override
